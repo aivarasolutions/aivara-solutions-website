@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import SocialMediaWidget from "./social-media-widget"
 
 export default function Footer() {
   return (
@@ -10,14 +11,14 @@ export default function Footer() {
         {/* Company Info - Centered on mobile */}
         <div className="flex flex-col gap-2 items-center text-center md:items-start md:text-left">
           <Link href="/" className="flex flex-col md:flex-row items-center gap-2">
-            {/* Text placeholder instead of logo */}
-            <span className="font-bold text-lg">
-              <span className="gold-text">Aivara</span> Solutions
-            </span>
+            <img src="/images/logo.png" alt="Aivara Solutions Logo" className="h-8 w-auto" />
           </Link>
           <p className="text-sm text-muted-foreground mt-2 max-w-xs mx-auto md:mx-0">
             AI-focused business based in Houston, TX, offering Custom GPTs for public and business use.
           </p>
+          <div className="mt-3">
+            <SocialMediaWidget />
+          </div>
         </div>
         
         {/* Quick Links - Centered on mobile */}

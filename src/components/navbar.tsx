@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import UserNav from "./user-nav"
 
 export default function Navbar() {
   return (
@@ -9,10 +10,7 @@ export default function Navbar() {
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2 md:justify-start justify-center w-full md:w-auto">
           <Link href="/" className="flex items-center space-x-2 md:justify-start justify-center">
-            {/* Text placeholder instead of logo */}
-            <span className="font-bold text-xl text-center">
-              <span className="gold-text">Aivara</span> Solutions
-            </span>
+            <img src="/images/logo.png" alt="Aivara Solutions Logo" className="h-8 w-auto" />
           </Link>
         </div>
 
@@ -36,6 +34,7 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden md:flex items-center gap-4">
+          <UserNav />
           <Button asChild variant="default" className="bg-primary hover:bg-primary/90">
             <Link href="/marketplace">
               Use Our GPTs
